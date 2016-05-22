@@ -7,4 +7,4 @@ The goal of this project is:
   3. To allow remote testing of FadeCandy servers via a webpage using P5js.
   
   
-Sketches written should in P5js should not have a large canvas as this can dramatically affect rendering times to an FC server.
+Sketches written in P5js should not have a large canvas as this can dramatically affect rendering times to an FC server.
