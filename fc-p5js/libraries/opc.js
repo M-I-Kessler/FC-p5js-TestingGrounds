@@ -39,7 +39,6 @@ function socketSetup(WebSocketAddress) {
 
 function led(index, x, y) {
 	loadPixels();
-	d = pixelDensity();
 	if (pixelLocationsRed === null) {
 		pixelLocationsRed.length = index + 1;
 		pixelLocationsGre.length = index + 1;
@@ -54,10 +53,12 @@ function led(index, x, y) {
 		ledYpoints.length = index + 1;
 	}
 	//Store pixel[] map to color arrays.
-	pixelLocationsRed[index] = (d * 4 * (y * width + x));
-	pixelLocationsGre[index] = (d * 4 * (y * width + x) + 1);
-	pixelLocationsBlu[index] = (d * 4 * (y * width + x) + 2);
-	//Store x,y to draw points for pixel locations
+	var pixelD = pixelDensity();
+	var idx = pixelD*pixelD*4*y*width+x*pixelD*4;
+	pixelLocationsRed[index] = (idx);
+	pixelLocationsGre[index] = (idx + 1);
+	pixelLocationsBlu[index] = (idx + 2);
+	//Store x,y to draw points for pixel locations 
 	ledXpoints[index] = x;
 	ledYpoints[index] = y;
 }
