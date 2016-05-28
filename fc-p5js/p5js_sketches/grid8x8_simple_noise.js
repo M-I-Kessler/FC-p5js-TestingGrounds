@@ -1,9 +1,9 @@
 // Connect to the local instance of fcserver
-var WebSocketAddress = "ws://inmicota:7890"; 
+var WebSocketAddress = "ws://127.0.0.1:7890"; 
 //Show LED pixel locations.
 var showPixelLocations = true; 
 //Change the HTML Id of the canvas.
-var canvasId = "grid8x8_dot";
+var canvasId = "grid8x8_simple_noise";
 //A simple example of using Processing's noise() function to draw LED clouds
 var clouds;
 

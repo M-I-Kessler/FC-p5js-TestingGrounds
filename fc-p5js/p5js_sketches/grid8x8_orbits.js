@@ -1,5 +1,5 @@
 // Connect to the local instance of fcserver
-var WebSocketAddress = "ws://inmicota:7890"; 
+var WebSocketAddress = "ws://127.0.0.1:7890"; 
 //Show LED pixel locations.
 var showPixelLocations = true; 
 //Change the HTML Id of the canvas.
